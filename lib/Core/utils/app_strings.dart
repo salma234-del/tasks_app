@@ -19,4 +19,6 @@ abstract class AppStrings {
   static const String forgetPasswordDescription =
       "Enter your email to send you a link to reset your password";
   static const String confirm = "Confirm";
+  static const String checkEmail =
+      "Please check your email to verify your account";
 }
