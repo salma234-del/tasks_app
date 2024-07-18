@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:tasks_app/Core/utils/app_colores.dart';
 import 'package:tasks_app/Core/utils/app_constants.dart';
 import 'package:tasks_app/Core/utils/app_router.dart';
 import 'package:tasks_app/firebase_options.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           elevation: 0,
+          iconTheme: IconThemeData(color: AppColors.primary),
         ),
         textTheme: ThemeData.dark().textTheme.apply(
               fontFamily: AppConstants.defaultFontFamily,

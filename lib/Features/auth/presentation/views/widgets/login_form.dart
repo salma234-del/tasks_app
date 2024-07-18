@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tasks_app/Core/helper_functions/email_validator.dart';
 import 'package:tasks_app/Core/helper_functions/password_validator.dart';
 import 'package:tasks_app/Core/utils/app_constants.dart';
+import 'package:tasks_app/Core/utils/app_router.dart';
 import 'package:tasks_app/Core/utils/app_strings.dart';
 import 'package:tasks_app/Core/utils/app_styles.dart';
 import 'package:tasks_app/Core/widgets/custom_button.dart';
@@ -31,12 +33,17 @@ class LoginForm extends StatelessWidget {
             validator: passwordValidator,
           ),
           const SizedBox(height: 24),
-          Align(
-            alignment: AlignmentDirectional.topEnd,
-            child: Text(
-              AppStrings.forgetPassword,
-              style: AppStyles.styleMedium14.copyWith(
-                decoration: TextDecoration.underline,
+          InkWell(
+            onTap: () {
+              GoRouter.of(context).push(AppRouter.forgetPasswordView);
+            },
+            child: Align(
+              alignment: AlignmentDirectional.topEnd,
+              child: Text(
+                AppStrings.forgetPassword,
+                style: AppStyles.styleMedium14.copyWith(
+                  decoration: TextDecoration.underline,
+                ),
               ),
             ),
           ),

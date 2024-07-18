@@ -16,4 +16,7 @@ abstract class AppStrings {
   static const String welcomeTo = "Welcome to";
   static const String createAccount = "Create an account and Join us now!";
   static const String fullName = "Full Name";
+  static const String forgetPasswordDescription =
+      "Enter your email to send you a link to reset your password";
+  static const String confirm = "Confirm";
 }
