@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tasks_app/Core/utils/app_constants.dart';
 import 'package:tasks_app/Core/utils/app_strings.dart';
 import 'package:tasks_app/Features/auth/data/repos/auth_repo.dart';
 import 'package:tasks_app/Features/auth/presentation/view_model/login_cubit/login_state.dart';
@@ -15,8 +16,8 @@ class LoginCubit extends Cubit<LoginState> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-  bool obscurePass = false;
-  IconData suffixIcon = Icons.visibility_outlined;
+  bool obscurePass = true;
+  IconData suffixIcon = AppConstants.visiblePasswordIcon;
 
   void changeAutovalidateMode() {
     autovalidateMode = AutovalidateMode.always;
@@ -25,8 +26,9 @@ class LoginCubit extends Cubit<LoginState> {
 
   void changeObscurePass() {
     obscurePass = !obscurePass;
-    suffixIcon =
-        obscurePass ? Icons.visibility_outlined : Icons.visibility_off_outlined;
+    suffixIcon = obscurePass
+        ? AppConstants.visiblePasswordIcon
+        : AppConstants.invisiblePasswordIcon;
     emit(LoginChangeObscurePass());
   }
 

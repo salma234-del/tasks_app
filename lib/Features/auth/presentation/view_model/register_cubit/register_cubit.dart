@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tasks_app/Core/errors/failure.dart';
+import 'package:tasks_app/Core/utils/app_constants.dart';
 import 'package:tasks_app/Features/auth/data/models/user_model.dart';
 import 'package:tasks_app/Features/auth/data/repos/auth_repo.dart';
 import 'package:tasks_app/Features/auth/presentation/view_model/register_cubit/register_state.dart';
@@ -18,8 +19,8 @@ class RegisterCubit extends Cubit<RegisterState> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-  bool obscurePass = false;
-  IconData suffixIcon = Icons.visibility_outlined;
+  bool obscurePass = true;
+  IconData suffixIcon = AppConstants.visiblePasswordIcon;
 
   void changeAutovalidateMode() {
     autovalidateMode = AutovalidateMode.always;
@@ -28,8 +29,9 @@ class RegisterCubit extends Cubit<RegisterState> {
 
   void changeObscurePass() {
     obscurePass = !obscurePass;
-    suffixIcon =
-        obscurePass ? Icons.visibility_outlined : Icons.visibility_off_outlined;
+    suffixIcon = obscurePass
+        ? AppConstants.visiblePasswordIcon
+        : AppConstants.invisiblePasswordIcon;
     emit(RegisterChangeObscurePass());
   }
 

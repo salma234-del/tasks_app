@@ -75,7 +75,7 @@ class CustomTextFormField extends StatelessWidget {
           icon: Icon(
             suffixIcon,
             color: AppColors.black2,
-            size: 28,
+            size: 24,
           ),
         ),
       ),

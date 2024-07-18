@@ -26,7 +26,7 @@ class RegisterForm extends StatelessWidget {
         } else if (state is RegisterFailure) {
           _buildRegisterFailure(context, state);
         } else if (state is RegisterLoading) {
-          _buildRegisterLoading(context, state);
+          _buildRegisterLoading(context);
         }
       },
       builder: (context, state) {
@@ -58,6 +58,9 @@ class RegisterForm extends StatelessWidget {
                 prefixIcon: AppConstants.passwordIcon,
                 keyboardType: TextInputType.visiblePassword,
                 validator: passwordValidator,
+                obscureText: cubit.obscurePass,
+                suffixIcon: cubit.suffixIcon,
+                suffixIconOnPressed: cubit.changeObscurePass,
               ),
               const SizedBox(height: 47),
               CustomButton(
@@ -97,7 +100,7 @@ class RegisterForm extends StatelessWidget {
     );
   }
 
-  void _buildRegisterLoading(BuildContext context, RegisterLoading state) {
+  void _buildRegisterLoading(BuildContext context) {
     showCustomLoading(context: context);
   }
 }
