@@ -13,4 +13,7 @@ abstract class AppStrings {
   static const String signUp = "Sign Up";
   static const String dontHaveAccount = "Don't have an account? ";
   static const String haveAccount = "Already have an account? ";
+  static const String welcomeTo = "Welcome to";
+  static const String createAccount = "Create an account and Join us now!";
+  static const String fullName = "Full Name";
 }

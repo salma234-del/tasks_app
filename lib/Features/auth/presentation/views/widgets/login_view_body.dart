@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasks_app/Core/utils/app_assets.dart';
+import 'package:tasks_app/Core/utils/app_colores.dart';
 import 'package:tasks_app/Core/utils/app_constants.dart';
 import 'package:tasks_app/Core/utils/app_sizes.dart';
 import 'package:tasks_app/Core/utils/app_strings.dart';
@@ -47,6 +48,22 @@ class LoginViewBody extends StatelessWidget {
               ),
               const SizedBox(height: 48),
               const LoginForm(),
+              const SizedBox(height: 19),
+              RichText(
+                text: TextSpan(
+                  text: AppStrings.dontHaveAccount,
+                  style: AppStyles.styleMedium14,
+                  children: [
+                    TextSpan(
+                      text: AppStrings.signUp,
+                      style: AppStyles.styleMedium14.copyWith(
+                        color: AppColors.primary,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 16),
             ],
           ),
         ),

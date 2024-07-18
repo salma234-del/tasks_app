@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasks_app/Core/helper_functions/email_validator.dart';
 import 'package:tasks_app/Core/helper_functions/password_validator.dart';
-import 'package:tasks_app/Core/utils/app_colores.dart';
 import 'package:tasks_app/Core/utils/app_constants.dart';
 import 'package:tasks_app/Core/utils/app_strings.dart';
 import 'package:tasks_app/Core/utils/app_styles.dart';
@@ -45,21 +44,6 @@ class LoginForm extends StatelessWidget {
           CustomButton(
             text: AppStrings.signIn,
             onPressed: () {},
-          ),
-          const SizedBox(height: 19),
-          RichText(
-            text: TextSpan(
-              text: AppStrings.dontHaveAccount,
-              style: AppStyles.styleMedium14,
-              children: [
-                TextSpan(
-                  text: AppStrings.signUp,
-                  style: AppStyles.styleMedium14.copyWith(
-                    color: AppColors.primary,
-                  ),
-                ),
-              ],
-            ),
           ),
         ],
       ),
