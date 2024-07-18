@@ -24,4 +24,6 @@ abstract class AppStrings {
 
   static const String successfullyRegistered =
       'You have successfully registered, please check your email to verify your account.';
+  static const String resetPassSuccess =
+      'Email sent successfully, check your email to reset your password.';
 }
