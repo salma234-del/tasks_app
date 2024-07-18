@@ -9,10 +9,10 @@ import 'package:tasks_app/Core/utils/app_sizes.dart';
 import 'package:tasks_app/Core/utils/app_strings.dart';
 import 'package:tasks_app/Core/utils/app_styles.dart';
 import 'package:tasks_app/Core/widgets/custom_background_container.dart';
-import 'package:tasks_app/Features/auth/presentation/views/widgets/login_form.dart';
+import 'package:tasks_app/Features/auth/presentation/views/widgets/register_form.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class RegisterViewBody extends StatelessWidget {
+  const RegisterViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class LoginViewBody extends StatelessWidget {
               const SizedBox(height: 25),
               RichText(
                 text: TextSpan(
-                  text: AppStrings.welcomeBack,
+                  text: AppStrings.welcomeTo,
                   style: AppStyles.styleMedium25,
                   children: [
                     const TextSpan(
@@ -46,26 +46,26 @@ class LoginViewBody extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               const Text(
-                AppStrings.haveProductiveDay,
+                AppStrings.createAccount,
                 style: AppStyles.styleMedium18,
               ),
               const SizedBox(height: 48),
-              const LoginForm(),
+              const RegisterForm(),
               const SizedBox(height: 19),
               RichText(
                 text: TextSpan(
-                  text: AppStrings.dontHaveAccount,
+                  text: AppStrings.haveAccount,
                   style: AppStyles.styleMedium14,
                   children: [
                     TextSpan(
-                      text: AppStrings.signUp,
+                      text: AppStrings.signIn,
                       style: AppStyles.styleMedium14.copyWith(
                         color: AppColors.primary,
                       ),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           GoRouter.of(context)
-                              .pushReplacement(AppRouter.registerView);
+                              .pushReplacement(AppRouter.loginView);
                         },
                     ),
                   ],
