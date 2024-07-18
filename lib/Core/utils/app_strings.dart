@@ -21,4 +21,7 @@ abstract class AppStrings {
   static const String confirm = "Confirm";
   static const String checkEmail =
       "Please check your email to verify your account";
+
+  static const String successfullyRegistered =
+      'You have successfully registered, please check your email to verify your account.';
 }

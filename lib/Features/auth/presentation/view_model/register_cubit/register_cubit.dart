@@ -43,11 +43,12 @@ class RegisterCubit extends Cubit<RegisterState> {
       ),
     );
     result.fold(
-      (failure) => emit(RegisterFailure(errorMessage: failure.toString())),
+      (failure) => emit(RegisterFailure(errorMessage: failure.errorMessage)),
       (user) async {
         final verification = await sendVerificationEmail();
         verification.fold(
-          (failure) => emit(RegisterFailure(errorMessage: failure.toString())),
+          (failure) =>
+              emit(RegisterFailure(errorMessage: failure.errorMessage)),
           (user) => emit(RegisterSuccess()),
         );
       },
