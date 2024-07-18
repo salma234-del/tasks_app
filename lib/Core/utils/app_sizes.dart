@@ -8,5 +8,8 @@ abstract class AppSizes {
   static double screenWidth(BuildContext context) =>
       MediaQuery.of(context).size.width;
 
-  static double defaultHorizontalPadding = 16;
+  static const double defaultHorizontalPadding = 16;
+  static const double defaultButtonVerticalPadding = 8;
+  static const double defaultButtonRadius = 10;
+  static const double textFormFieldBorderRadius = 5;
 }

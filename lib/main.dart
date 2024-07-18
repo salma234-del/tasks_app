@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:tasks_app/Core/utils/app_constants.dart';
 import 'package:tasks_app/Features/auth/presentation/views/login_view.dart';
 import 'package:tasks_app/firebase_options.dart';
 
@@ -23,6 +24,9 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
+        textTheme: ThemeData.dark().textTheme.apply(
+              fontFamily: AppConstants.defaultFontFamily,
+            ),
       ),
       home: const LoginView(),
     );
