@@ -87,4 +87,18 @@ class AuthRepoImpl implements AuthRepo {
       }
     }
   }
+
+  @override
+  Future<Either<Failure, void>> signOut() async {
+    try {
+      await firebaseAuthService.signOut();
+      return const Right(null);
+    } catch (e) {
+      if (e is FirebaseAuthException) {
+        return Left(ServerFailure.fromFirebaseAuthException(e.code));
+      } else {
+        return Left(ServerFailure(errorMessage: e.toString()));
+      }
+    }
+  }
 }

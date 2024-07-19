@@ -91,7 +91,7 @@ class LoginForm extends StatelessWidget {
 
   void _buildLoginSuccess(BuildContext context) {
     Navigator.of(context).pop();
-    GoRouter.of(context).go('/home');
+    GoRouter.of(context).go(AppRouter.tasksView);
     saveLoginStateToCache();
   }
 
