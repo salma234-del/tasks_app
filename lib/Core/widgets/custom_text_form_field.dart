@@ -17,6 +17,10 @@ class CustomTextFormField extends StatelessWidget {
   final int? maxLines;
   final bool withFocusBorder;
   final String? hintText;
+  final Color? filledColor;
+  final Color? prefixIconColor;
+  final TextStyle? hintStyle;
+  final Color? textColor;
 
   const CustomTextFormField({
     super.key,
@@ -33,12 +37,16 @@ class CustomTextFormField extends StatelessWidget {
     this.maxLines = 1,
     this.withFocusBorder = true,
     this.hintText,
+    this.filledColor,
+    this.prefixIconColor,
+    this.hintStyle,
+    this.textColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: const TextStyle(color: AppColors.black1),
+      style: TextStyle(color: textColor ?? AppColors.black1),
       onSaved: onSaved,
       controller: controller,
       keyboardType: keyboardType,
@@ -50,9 +58,9 @@ class CustomTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         isDense: true,
         //isCollapsed: true,
-        hintStyle: AppStyles.styleRegular18,
+        hintStyle: hintStyle ?? AppStyles.styleRegular18,
         hintText: hintText,
-        fillColor: AppColors.white1,
+        fillColor: filledColor ?? AppColors.white1,
         filled: true,
         border: OutlineInputBorder(
           borderSide: BorderSide.none,
@@ -65,11 +73,14 @@ class CustomTextFormField extends StatelessWidget {
         // focusedBorder: buildTextFieldBorder(
         //   color: withFocusBorder ? AppColors.primary : AppColors.black2,
         // ),
-        prefixIcon: Icon(
-          prefixIcon,
-          size: 24,
-          color: AppColors.black1,
-        ),
+        alignLabelWithHint: true,
+        prefixIcon: prefixIcon != null
+            ? Icon(
+                prefixIcon,
+                size: 24,
+                color: prefixIconColor ?? AppColors.black1,
+              )
+            : null,
         suffixIcon: IconButton(
           onPressed: suffixIconOnPressed,
           icon: Icon(
