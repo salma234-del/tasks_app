@@ -64,7 +64,7 @@ class LoginForm extends StatelessWidget {
                   alignment: AlignmentDirectional.topEnd,
                   child: Text(
                     AppStrings.forgetPassword,
-                    style: AppStyles.styleMedium14.copyWith(
+                    style: AppStyles.styleMediumWhite14.copyWith(
                       decoration: TextDecoration.underline,
                     ),
                   ),
@@ -91,7 +91,7 @@ class LoginForm extends StatelessWidget {
 
   void _buildLoginSuccess(BuildContext context) {
     Navigator.of(context).pop();
-    GoRouter.of(context).go('/home');
+    GoRouter.of(context).go(AppRouter.tasksView);
     saveLoginStateToCache();
   }
 

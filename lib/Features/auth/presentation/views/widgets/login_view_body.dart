@@ -55,11 +55,11 @@ class LoginViewBody extends StatelessWidget {
               RichText(
                 text: TextSpan(
                   text: AppStrings.dontHaveAccount,
-                  style: AppStyles.styleMedium14,
+                  style: AppStyles.styleMediumWhite14,
                   children: [
                     TextSpan(
                       text: AppStrings.signUp,
-                      style: AppStyles.styleMedium14.copyWith(
+                      style: AppStyles.styleMediumWhite14.copyWith(
                         color: AppColors.primary,
                       ),
                       recognizer: TapGestureRecognizer()

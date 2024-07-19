@@ -11,4 +11,5 @@ abstract class AppConstants {
   static RegExp nameRegex = RegExp(r"^[a-zA-Z]+(?:[-\'\s][a-zA-Z]+)*$");
   static RegExp emailRegex = RegExp(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
   static const String isLoginKey = 'isLogin';
+  static const int taskDescriptionMaxLines = 6;
 }

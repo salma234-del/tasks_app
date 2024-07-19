@@ -26,4 +26,20 @@ abstract class AppStrings {
       'You have successfully registered, please check your email to verify your account.';
   static const String resetPassSuccess =
       'Email sent successfully, check your email to reset your password.';
+
+  static const String tasksList = "Tasks List";
+  static const String taskTitle = "Task Title";
+  static const String taskDescription = "Task Description";
+  static const String addTask = "Add Task";
+  static const String add = "Add";
+  static const String edit = "Edit";
+  static const String delete = "Delete";
+  static const String taskAdded = "Task Added Successfully";
+  static const String taskEdited = "Task Edited Successfully";
+  static const String taskDeleted = "Task Deleted Successfully";
+  static const String taskCompleted = "Task Completed Successfully";
+  static const String cancel = "Cancel";
+  static const noInternet =
+      'No Internet Connection, Please Check Your Connection and Try Again';
+  static const noTasks = 'No tasks added yet, let\'s add your tasks...';
 }

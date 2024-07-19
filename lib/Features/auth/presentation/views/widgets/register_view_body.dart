@@ -55,11 +55,11 @@ class RegisterViewBody extends StatelessWidget {
               RichText(
                 text: TextSpan(
                   text: AppStrings.haveAccount,
-                  style: AppStyles.styleMedium14,
+                  style: AppStyles.styleMediumWhite14,
                   children: [
                     TextSpan(
                       text: AppStrings.signIn,
-                      style: AppStyles.styleMedium14.copyWith(
+                      style: AppStyles.styleMediumWhite14.copyWith(
                         color: AppColors.primary,
                       ),
                       recognizer: TapGestureRecognizer()

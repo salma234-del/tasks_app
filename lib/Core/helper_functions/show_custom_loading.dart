@@ -6,6 +6,7 @@ void showCustomLoading({
   required BuildContext context,
 }) {
   showDialog(
+    barrierDismissible: false,
     context: context,
     builder: (context) => const SpinKitChasingDots(
       color: AppColors.primary,
