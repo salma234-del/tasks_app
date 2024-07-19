@@ -16,10 +16,13 @@ class TasksView extends StatelessWidget {
           create: (context) => LogoutCubit(getIt()),
         ),
       ],
-      child: const Scaffold(
-        extendBodyBehindAppBar: true,
-        appBar: CustomTasksViewAppBar(),
-        body: TasksViewBody(),
+      child: Scaffold(
+        appBar: const CustomTasksViewAppBar(),
+        body: const TasksViewBody(),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(Icons.add),
+        ),
       ),
     );
   }

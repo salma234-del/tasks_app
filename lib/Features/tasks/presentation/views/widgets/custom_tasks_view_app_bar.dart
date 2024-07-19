@@ -40,7 +40,7 @@ class CustomTasksViewAppBar extends StatelessWidget
           ),
           Text(
             user.email!,
-            style: AppStyles.styleMedium14,
+            style: AppStyles.styleMediumWhite14,
           ),
         ],
       ),

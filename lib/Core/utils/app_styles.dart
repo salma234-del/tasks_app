@@ -22,10 +22,20 @@ abstract class AppStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.black2,
   );
+  static const TextStyle styleRegular16 = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+  );
 
-  static const TextStyle styleMedium14 = TextStyle(
+  static const TextStyle styleMediumWhite14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w500,
     color: AppColors.white2,
+  );
+
+  static const TextStyle styleMediumBlack14 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: AppColors.black1,
   );
 }

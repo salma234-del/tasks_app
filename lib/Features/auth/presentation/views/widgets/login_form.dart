@@ -64,7 +64,7 @@ class LoginForm extends StatelessWidget {
                   alignment: AlignmentDirectional.topEnd,
                   child: Text(
                     AppStrings.forgetPassword,
-                    style: AppStyles.styleMedium14.copyWith(
+                    style: AppStyles.styleMediumWhite14.copyWith(
                       decoration: TextDecoration.underline,
                     ),
                   ),
