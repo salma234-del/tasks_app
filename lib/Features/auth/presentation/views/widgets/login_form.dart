@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tasks_app/Core/helper_functions/email_validator.dart';
 import 'package:tasks_app/Core/helper_functions/password_validator.dart';
+import 'package:tasks_app/Core/helper_functions/save_login_state_to_cache.dart';
 import 'package:tasks_app/Core/helper_functions/show_custom_loading.dart';
 import 'package:tasks_app/Core/helper_functions/show_custom_snack_bar.dart';
 import 'package:tasks_app/Core/utils/app_constants.dart';
@@ -91,6 +92,7 @@ class LoginForm extends StatelessWidget {
   void _buildLoginSuccess(BuildContext context) {
     Navigator.of(context).pop();
     GoRouter.of(context).go('/home');
+    saveLoginStateToCache();
   }
 
   void _buildLoginFailure(BuildContext context, LoginFailure state) {

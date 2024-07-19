@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tasks_app/Core/bloc/bloc_observer.dart';
+import 'package:tasks_app/Core/network/local/chache_helper.dart';
 import 'package:tasks_app/Core/services/services_locator.dart';
 import 'package:tasks_app/Core/utils/app_colores.dart';
 import 'package:tasks_app/Core/utils/app_constants.dart';
@@ -15,6 +16,7 @@ void main() async {
   );
   Bloc.observer = MyBlocObserver();
   ServicesLocator.setup();
+  await CacheHelper.init();
   runApp(const MyApp());
 }
 
