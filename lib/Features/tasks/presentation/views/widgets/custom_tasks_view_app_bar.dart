@@ -23,6 +23,7 @@ class CustomTasksViewAppBar extends StatelessWidget
     final user = getUserData();
 
     return AppBar(
+      backgroundColor: AppColors.bgBegin,
       leading: Padding(
         padding: const EdgeInsetsDirectional.only(
           start: AppSizes.defaultHorizontalPadding,

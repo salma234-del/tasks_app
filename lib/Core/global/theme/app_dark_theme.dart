@@ -5,7 +5,6 @@ import 'package:tasks_app/Core/utils/app_constants.dart';
 ThemeData darkTheme = ThemeData.dark().copyWith(
   primaryColor: AppColors.primary,
   appBarTheme: const AppBarTheme(
-    backgroundColor: AppColors.bgBegin,
     elevation: 0,
     iconTheme: IconThemeData(color: AppColors.primary),
   ),

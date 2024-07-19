@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tasks_app/Core/services/services_locator.dart';
+import 'package:tasks_app/Core/utils/app_colores.dart';
 import 'package:tasks_app/Features/auth/presentation/view_model/reset_pass_cubit/reset_pass_cubit.dart';
 import 'package:tasks_app/Features/auth/presentation/views/widgets/forget_password_view_body.dart';
 
@@ -13,7 +14,9 @@ class ForgetPasswordView extends StatelessWidget {
       create: (context) => ResetPassCubit(getIt()),
       child: Scaffold(
         extendBodyBehindAppBar: true,
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: AppColors.transparent,
+        ),
         body: const ForgetPasswordViewBody(),
       ),
     );

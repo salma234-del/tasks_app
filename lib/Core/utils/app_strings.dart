@@ -39,4 +39,6 @@ abstract class AppStrings {
   static const String taskDeleted = "Task Deleted Successfully";
   static const String taskCompleted = "Task Completed Successfully";
   static const String cancel = "Cancel";
+  static const noInternet =
+      'No Internet Connection, Please Check Your Connection and Try Again';
 }
