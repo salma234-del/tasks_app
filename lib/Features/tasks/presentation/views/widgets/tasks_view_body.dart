@@ -3,7 +3,7 @@ import 'package:tasks_app/Core/utils/app_sizes.dart';
 import 'package:tasks_app/Core/utils/app_strings.dart';
 import 'package:tasks_app/Core/utils/app_styles.dart';
 import 'package:tasks_app/Core/widgets/custom_background_container.dart';
-import 'package:tasks_app/Features/tasks/presentation/views/widgets/tasks_list_view.dart';
+import 'package:tasks_app/Features/tasks/presentation/views/widgets/get_tasks_builder.dart';
 
 class TasksViewBody extends StatelessWidget {
   const TasksViewBody({super.key});
@@ -25,7 +25,7 @@ class TasksViewBody extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Expanded(
-              child: TasksListView(),
+              child: GetTasksBuilder(),
             ),
           ],
         ),

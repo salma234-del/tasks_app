@@ -41,4 +41,5 @@ abstract class AppStrings {
   static const String cancel = "Cancel";
   static const noInternet =
       'No Internet Connection, Please Check Your Connection and Try Again';
+  static const noTasks = 'No tasks added yet, let\'s add your tasks...';
 }

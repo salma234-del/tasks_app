@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tasks_app/Core/services/services_locator.dart';
 import 'package:tasks_app/Core/utils/app_colores.dart';
+import 'package:tasks_app/Features/tasks/presentation/views/view_model/get_tasks_cubit/get_tasks_cubit.dart';
 import 'package:tasks_app/Features/tasks/presentation/views/view_model/logout_cubit/logout_cubit.dart';
 import 'package:tasks_app/Features/tasks/presentation/views/widgets/add_task_bottom_sheet.dart';
 import 'package:tasks_app/Features/tasks/presentation/views/widgets/custom_tasks_view_app_bar.dart';
@@ -16,6 +17,9 @@ class TasksView extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => LogoutCubit(getIt()),
+        ),
+        BlocProvider(
+          create: (context) => GetTasksCubit(getIt())..getTasks(),
         ),
       ],
       child: Scaffold(

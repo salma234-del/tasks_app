@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:tasks_app/Core/utils/app_colores.dart';
 import 'package:tasks_app/Core/utils/app_sizes.dart';
 import 'package:tasks_app/Core/utils/app_styles.dart';
+import 'package:tasks_app/Features/tasks/data/models/task_model.dart';
 
 class TaskItem extends StatelessWidget {
-  const TaskItem({super.key});
+  const TaskItem({
+    required this.task,
+    super.key,
+  });
+
+  final TaskModel task;
 
   @override
   Widget build(BuildContext context) {
@@ -18,20 +24,20 @@ class TaskItem extends StatelessWidget {
         color: AppColors.white1,
         borderRadius: BorderRadius.circular(5),
       ),
-      child: const Row(
+      child: Row(
         children: [
           Icon(
             Icons.check_circle,
-            color: AppColors.green,
+            color: task.isCompleted ? AppColors.green : AppColors.black2,
           ),
-          SizedBox(width: 6),
+          const SizedBox(width: 6),
           Expanded(
             child: Text(
-              'salma',
+              task.title,
               style: AppStyles.styleMediumBlack14,
             ),
           ),
-          Icon(
+          const Icon(
             Icons.arrow_forward_ios,
             color: AppColors.primary,
           )

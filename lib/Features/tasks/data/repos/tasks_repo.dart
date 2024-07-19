@@ -6,7 +6,7 @@ abstract class TasksRepo {
   Future<Either<Failure, void>> addTask({
     required final TaskModel task,
   });
-  // Future<Either<Failure, List<TaskModel>>> getTasks();
+  Stream<Either<Failure, List<TaskModel>>> getTasks();
   // Future<Either<Failure, void>> updateTask({
   //   required final TaskModel task,
   // });

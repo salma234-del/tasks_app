@@ -24,4 +24,24 @@ class TasksRepoImpl implements TasksRepo {
       }
     }
   }
+
+  @override
+  Stream<Either<Failure, List<TaskModel>>> getTasks() {
+    try {
+      var tasksStream = tasksFirestoreService.getTasks();
+      return tasksStream.map((event) {
+        List<TaskModel> tasks = [];
+        for (var doc in event.docs) {
+          tasks.add(TaskModel.fromJson(doc.data()));
+        }
+        return Right(tasks);
+      });
+    } catch (e) {
+      if (e is FirebaseException) {
+        return Stream.value(Left(ServerFailure.fromFirebaseException(e)));
+      } else {
+        return Stream.value(Left(ServerFailure(errorMessage: e.toString())));
+      }
+    }
+  }
 }
