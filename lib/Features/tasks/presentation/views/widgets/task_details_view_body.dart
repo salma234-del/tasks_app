@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tasks_app/Core/helper_functions/show_custom_snack_bar.dart';
 import 'package:tasks_app/Core/utils/app_colores.dart';
 import 'package:tasks_app/Core/utils/app_constants.dart';
+import 'package:tasks_app/Core/utils/app_router.dart';
 import 'package:tasks_app/Core/utils/app_strings.dart';
 import 'package:tasks_app/Core/utils/app_styles.dart';
 import 'package:tasks_app/Core/widgets/custom_background_container.dart';
@@ -105,7 +107,12 @@ class TaskDetailsViewBody extends StatelessWidget {
                       const SizedBox(width: 35),
                       Expanded(
                         child: CustomTaskActionButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            GoRouter.of(context).push(
+                              AppRouter.editTaskView,
+                              extra: task,
+                            );
+                          },
                           text: AppStrings.edit,
                           icon: const Icon(
                             Icons.edit_document,

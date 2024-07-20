@@ -47,4 +47,6 @@ abstract class AppStrings {
   static const String incomplete = 'Incomplete';
   static const String completedTasks = 'Completed Tasks';
   static const String incompleteTasks = 'Incomplete Tasks';
+  static const String editTask = 'Edit Task';
+  static const String editTaskSuccess = 'Task Edited Successfully';
 }
