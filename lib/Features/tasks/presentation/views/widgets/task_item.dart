@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tasks_app/Core/utils/app_colores.dart';
+import 'package:tasks_app/Core/utils/app_constants.dart';
 import 'package:tasks_app/Core/utils/app_router.dart';
 import 'package:tasks_app/Core/utils/app_sizes.dart';
 import 'package:tasks_app/Core/utils/app_styles.dart';
@@ -36,7 +37,7 @@ class TaskItem extends StatelessWidget {
         child: Row(
           children: [
             Icon(
-              Icons.check_circle,
+              AppConstants.checkIcon,
               color: task.isCompleted ? AppColors.green : AppColors.black2,
             ),
             const SizedBox(width: 6),

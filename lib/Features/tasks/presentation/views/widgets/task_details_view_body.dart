@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasks_app/Core/utils/app_colores.dart';
+import 'package:tasks_app/Core/utils/app_constants.dart';
 import 'package:tasks_app/Core/utils/app_strings.dart';
 import 'package:tasks_app/Core/utils/app_styles.dart';
 import 'package:tasks_app/Core/widgets/custom_background_container.dart';
@@ -25,7 +26,7 @@ class TaskDetailsViewBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 80),
+              const SizedBox(height: 50),
               Row(
                 children: [
                   Expanded(
@@ -36,8 +37,8 @@ class TaskDetailsViewBody extends StatelessWidget {
                   ),
                   const SizedBox(width: 8),
                   Icon(
-                    Icons.check_circle,
-                    size: 32,
+                    AppConstants.checkIcon,
+                    size: 28,
                     color: task.isCompleted ? AppColors.green : AppColors.grey,
                   ),
                 ],
@@ -57,7 +58,7 @@ class TaskDetailsViewBody extends StatelessWidget {
                       onPressed: () {},
                       text: AppStrings.done,
                       icon: const Icon(
-                        Icons.check_circle,
+                        AppConstants.checkIcon,
                         color: AppColors.green,
                       ),
                     ),
