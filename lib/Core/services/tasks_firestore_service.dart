@@ -20,7 +20,7 @@ class TasksFirestoreService {
         .collection(FirebaseConstants.usersTasksCollection)
         .doc(getUserData().uid)
         .collection(FirebaseConstants.tasksCollection)
-        .orderBy('createdAt', descending: true)
+        .orderBy('createdAt', descending: false)
         .snapshots();
   }
 

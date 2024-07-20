@@ -11,8 +11,8 @@ import 'package:tasks_app/Core/widgets/custom_background_container.dart';
 import 'package:tasks_app/Features/tasks/data/models/task_model.dart';
 import 'package:tasks_app/Features/tasks/presentation/view_model/update_task_cubit/update_task_cubit.dart';
 import 'package:tasks_app/Features/tasks/presentation/view_model/update_task_cubit/update_task_state.dart';
-import 'package:tasks_app/Features/tasks/presentation/views/widgets/custom_alert_dialog.dart';
 import 'package:tasks_app/Features/tasks/presentation/views/widgets/custom_task_action_button.dart';
+import 'package:tasks_app/Features/tasks/presentation/views/widgets/delete_task_builder.dart';
 
 class TaskDetailsViewBody extends StatelessWidget {
   const TaskDetailsViewBody({
@@ -101,10 +101,8 @@ class TaskDetailsViewBody extends StatelessWidget {
                             showDialog(
                               context: context,
                               builder: (context) {
-                                return CustomAlertDailog(
-                                  title: AppStrings.deleteTask,
-                                  body: AppStrings.deleteTaskConfirmation,
-                                  onConfirm: () {},
+                                return DeleteTaskBuilder(
+                                  id: task.id,
                                 );
                               },
                             );
