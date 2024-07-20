@@ -45,4 +45,6 @@ abstract class AppStrings {
   static const String taskDetails = 'Task Details';
   static const String complete = 'Complete';
   static const String incomplete = 'Incomplete';
+  static const String completedTasks = 'Completed Tasks';
+  static const String incompleteTasks = 'Incomplete Tasks';
 }
