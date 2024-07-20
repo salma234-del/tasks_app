@@ -5,7 +5,7 @@ import 'package:tasks_app/Core/utils/app_colores.dart';
 import 'package:tasks_app/Core/utils/app_sizes.dart';
 import 'package:tasks_app/Core/utils/app_strings.dart';
 import 'package:tasks_app/Core/utils/app_styles.dart';
-import 'package:tasks_app/Features/tasks/presentation/views/view_model/add_task_cubit/add_task_cubit.dart';
+import 'package:tasks_app/Features/tasks/presentation/view_model/add_task_cubit/add_task_cubit.dart';
 import 'package:tasks_app/Features/tasks/presentation/views/widgets/add_task_form.dart';
 
 class AddTaskBottomSheet extends StatelessWidget {

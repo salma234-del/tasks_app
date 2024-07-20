@@ -58,4 +58,18 @@ class TasksRepoImpl implements TasksRepo {
       }
     }
   }
+
+  @override
+  Future<Either<Failure, void>> deleteTask({required String id}) async {
+    try {
+      await tasksFirestoreService.deleteData(id: id);
+      return const Right(null);
+    } catch (e) {
+      if (e is FirebaseException) {
+        return Left(ServerFailure.fromFirebaseException(e));
+      } else {
+        return Left(ServerFailure(errorMessage: e.toString()));
+      }
+    }
+  }
 }

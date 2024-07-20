@@ -9,8 +9,8 @@ import 'package:tasks_app/Core/utils/app_colores.dart';
 import 'package:tasks_app/Core/utils/app_router.dart';
 import 'package:tasks_app/Core/utils/app_sizes.dart';
 import 'package:tasks_app/Core/utils/app_styles.dart';
-import 'package:tasks_app/Features/tasks/presentation/views/view_model/logout_cubit/logout_cubit.dart';
-import 'package:tasks_app/Features/tasks/presentation/views/view_model/logout_cubit/logout_state.dart';
+import 'package:tasks_app/Features/tasks/presentation/view_model/logout_cubit/logout_cubit.dart';
+import 'package:tasks_app/Features/tasks/presentation/view_model/logout_cubit/logout_state.dart';
 
 class CustomTasksViewAppBar extends StatelessWidget
     implements PreferredSizeWidget {

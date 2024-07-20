@@ -32,4 +32,13 @@ class TasksFirestoreService {
         .doc(data['id'])
         .update(data);
   }
+
+  Future<void> deleteData({required final String id}) async {
+    await _firestore
+        .collection(FirebaseConstants.usersTasksCollection)
+        .doc(getUserData().uid)
+        .collection(FirebaseConstants.tasksCollection)
+        .doc(id)
+        .delete();
+  }
 }

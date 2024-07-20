@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tasks_app/Features/tasks/data/models/task_model.dart';
 import 'package:tasks_app/Features/tasks/data/repos/tasks_repo.dart';
-import 'package:tasks_app/Features/tasks/presentation/views/view_model/add_task_cubit/add_task_state.dart';
+import 'package:tasks_app/Features/tasks/presentation/view_model/add_task_cubit/add_task_state.dart';
 import 'package:uuid/uuid.dart';
 
 class AddTaskCubit extends Cubit<AddTaskState> {

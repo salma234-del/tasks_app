@@ -49,4 +49,8 @@ abstract class AppStrings {
   static const String incompleteTasks = 'Incomplete Tasks';
   static const String editTask = 'Edit Task';
   static const String editTaskSuccess = 'Task Edited Successfully';
+  static const String deleteTask = 'Delete Task';
+  static const String deleteTaskSuccess = 'Task Deleted Successfully';
+  static const String deleteTaskConfirmation =
+      'Are you sure you want to delete this task?';
 }

@@ -9,8 +9,8 @@ import 'package:tasks_app/Core/utils/app_strings.dart';
 import 'package:tasks_app/Core/utils/app_styles.dart';
 import 'package:tasks_app/Core/widgets/custom_button.dart';
 import 'package:tasks_app/Core/widgets/custom_text_form_field.dart';
-import 'package:tasks_app/Features/tasks/presentation/views/view_model/add_task_cubit/add_task_cubit.dart';
-import 'package:tasks_app/Features/tasks/presentation/views/view_model/add_task_cubit/add_task_state.dart';
+import 'package:tasks_app/Features/tasks/presentation/view_model/add_task_cubit/add_task_cubit.dart';
+import 'package:tasks_app/Features/tasks/presentation/view_model/add_task_cubit/add_task_state.dart';
 
 class AddTaskForm extends StatelessWidget {
   const AddTaskForm({super.key});

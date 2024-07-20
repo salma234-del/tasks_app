@@ -12,8 +12,8 @@ import 'package:tasks_app/Core/utils/app_styles.dart';
 import 'package:tasks_app/Core/widgets/custom_button.dart';
 import 'package:tasks_app/Core/widgets/custom_text_form_field.dart';
 import 'package:tasks_app/Features/tasks/data/models/task_model.dart';
-import 'package:tasks_app/Features/tasks/presentation/views/view_model/update_task_cubit/update_task_cubit.dart';
-import 'package:tasks_app/Features/tasks/presentation/views/view_model/update_task_cubit/update_task_state.dart';
+import 'package:tasks_app/Features/tasks/presentation/view_model/update_task_cubit/update_task_cubit.dart';
+import 'package:tasks_app/Features/tasks/presentation/view_model/update_task_cubit/update_task_state.dart';
 
 class EditTaskForm extends StatelessWidget {
   const EditTaskForm({
