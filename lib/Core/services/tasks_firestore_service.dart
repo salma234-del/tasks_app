@@ -23,4 +23,13 @@ class TasksFirestoreService {
         .orderBy('createdAt', descending: true)
         .snapshots();
   }
+
+  Future<void> updateData({required final Map<String, dynamic> data}) async {
+    await _firestore
+        .collection(FirebaseConstants.usersTasksCollection)
+        .doc(getUserData().uid)
+        .collection(FirebaseConstants.tasksCollection)
+        .doc(data['id'])
+        .update(data);
+  }
 }

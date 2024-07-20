@@ -44,4 +44,18 @@ class TasksRepoImpl implements TasksRepo {
       }
     }
   }
+
+  @override
+  Future<Either<Failure, void>> updateTask({required TaskModel task}) async {
+    try {
+      await tasksFirestoreService.updateData(data: task.toJson());
+      return const Right(null);
+    } catch (e) {
+      if (e is FirebaseException) {
+        return Left(ServerFailure.fromFirebaseException(e));
+      } else {
+        return Left(ServerFailure(errorMessage: e.toString()));
+      }
+    }
+  }
 }
