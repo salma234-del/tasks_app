@@ -13,9 +13,11 @@ class TasksListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      physics: const BouncingScrollPhysics(),
+      padding: const EdgeInsets.all(0),
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
       itemBuilder: (context, index) => TaskItem(task: tasks[index]),
-      separatorBuilder: (context, index) => const SizedBox(height: 35),
+      separatorBuilder: (context, index) => const SizedBox(height: 16),
       itemCount: tasks.length,
     );
   }

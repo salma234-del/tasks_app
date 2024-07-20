@@ -20,7 +20,25 @@ class TasksFirestoreService {
         .collection(FirebaseConstants.usersTasksCollection)
         .doc(getUserData().uid)
         .collection(FirebaseConstants.tasksCollection)
-        .orderBy('createdAt', descending: true)
+        .orderBy('createdAt', descending: false)
         .snapshots();
+  }
+
+  Future<void> updateData({required final Map<String, dynamic> data}) async {
+    await _firestore
+        .collection(FirebaseConstants.usersTasksCollection)
+        .doc(getUserData().uid)
+        .collection(FirebaseConstants.tasksCollection)
+        .doc(data['id'])
+        .update(data);
+  }
+
+  Future<void> deleteData({required final String id}) async {
+    await _firestore
+        .collection(FirebaseConstants.usersTasksCollection)
+        .doc(getUserData().uid)
+        .collection(FirebaseConstants.tasksCollection)
+        .doc(id)
+        .delete();
   }
 }

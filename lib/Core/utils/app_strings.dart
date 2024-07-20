@@ -43,5 +43,14 @@ abstract class AppStrings {
       'No Internet Connection, Please Check Your Connection and Try Again';
   static const noTasks = 'No tasks added yet, let\'s add your tasks...';
   static const String taskDetails = 'Task Details';
-  static const String done = 'Done';
+  static const String complete = 'Complete';
+  static const String incomplete = 'Incomplete';
+  static const String completedTasks = 'Completed Tasks';
+  static const String incompleteTasks = 'Incomplete Tasks';
+  static const String editTask = 'Edit Task';
+  static const String editTaskSuccess = 'Task Edited Successfully';
+  static const String deleteTask = 'Delete Task';
+  static const String deleteTaskSuccess = 'Task Deleted Successfully';
+  static const String deleteTaskConfirmation =
+      'Are you sure you want to delete this task?';
 }

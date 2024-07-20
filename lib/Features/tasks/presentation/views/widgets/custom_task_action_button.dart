@@ -34,7 +34,7 @@ class CustomTaskActionButton extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(
             vertical: 12,
-            horizontal: 16,
+            horizontal: 2,
           ),
           child: Column(
             children: [

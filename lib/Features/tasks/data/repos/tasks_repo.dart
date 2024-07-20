@@ -7,13 +7,10 @@ abstract class TasksRepo {
     required final TaskModel task,
   });
   Stream<Either<Failure, List<TaskModel>>> getTasks();
-  // Future<Either<Failure, void>> updateTask({
-  //   required final TaskModel task,
-  // });
-  // Future<Either<Failure, void>> deleteTask({
-  //   required final String id,
-  // });
-  // Future<Either<Failure, void>> completeTask({
-  //   required final String id,
-  // });
+  Future<Either<Failure, void>> updateTask({
+    required final TaskModel task,
+  });
+  Future<Either<Failure, void>> deleteTask({
+    required final String id,
+  });
 }
